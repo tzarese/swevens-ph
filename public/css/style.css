@@ -1,0 +1,628 @@
+/* SWEVENS Gaming Platform - Coquette & Coquette Night Stylesheet 🎀 */
+
+/* =========================================================
+   LIGHT THEME: Coquette Day 🎀 (Blush, Ribbons, Cream & Berries)
+   ========================================================= */
+:root,
+[data-theme="light"] {
+  --bg-main: #fff5f8;
+  --bg-subtle: #ffecf3;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fff9fb;
+  --bg-surface: #ffe6ef;
+  --bg-input: #ffffff;
+  --border-color: #ffd1e3;
+  --border-hover: #ff85b6;
+  --border-focus: #ff4785;
+  --accent-pink: #ff4785;
+  --accent-pink-soft: #ffe4ee;
+  --accent-pink-glow: rgba(255, 71, 133, 0.25);
+  --accent-rose: #ff75a0;
+  --accent-purple: #c04bb0;
+  --accent-gold: #e6a100;
+  --accent-green: #059669;
+  --text-main: #42112d;
+  --text-muted: #733659;
+  --text-dim: #9c6081;
+  --shadow-coquette: 0 10px 25px -4px rgba(255, 105, 180, 0.15), 0 4px 10px -2px rgba(255, 182, 193, 0.2);
+  --shadow-card: 0 4px 20px -2px rgba(255, 140, 180, 0.12);
+  --nav-bg: rgba(255, 245, 248, 0.94);
+  --banner-bg: linear-gradient(135deg, #fff0f5 0%, #ffe0ec 50%, #ffd6e6 100%);
+  --banner-border: #ffbccc;
+  --table-head-bg: #ffeaf2;
+  --table-border: #ffe0eb;
+  --code-box-bg: #fff0f6;
+}
+
+/* =========================================================
+   DARK THEME: Coquette Velvet Night 🌙 🎀 (Deep Plum & Neon Rose)
+   ========================================================= */
+[data-theme="dark"] {
+  --bg-main: #0e0717;
+  --bg-subtle: #170c24;
+  --bg-card: #180d28;
+  --bg-card-hover: #221438;
+  --bg-surface: #26153d;
+  --bg-input: #12091f;
+  --border-color: #381e54;
+  --border-hover: #ff529a;
+  --border-focus: #ff2a85;
+  --accent-pink: #ff2a85;
+  --accent-pink-soft: #381530;
+  --accent-pink-glow: rgba(255, 42, 133, 0.35);
+  --accent-rose: #ff529a;
+  --accent-purple: #c729b0;
+  --accent-gold: #ffb703;
+  --accent-green: #10b981;
+  --text-main: #fdf2f8;
+  --text-muted: #e0b4d4;
+  --text-dim: #a67c9c;
+  --shadow-coquette: 0 10px 30px -4px rgba(255, 42, 133, 0.25);
+  --shadow-card: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+  --nav-bg: rgba(14, 7, 23, 0.94);
+  --banner-bg: linear-gradient(135deg, #1b0c2e 0%, #291242 50%, #160826 100%);
+  --banner-border: rgba(255, 42, 133, 0.4);
+  --table-head-bg: #120820;
+  --table-border: #2d1842;
+  --code-box-bg: #10061b;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Coquette Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 9999px;
+  border: 2px solid var(--bg-subtle);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-pink);
+}
+
+/* Glassmorphism & Panels */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
+  border-radius: 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.glass-nav {
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-coquette);
+}
+
+/* Coquette Ribbon Button */
+.btn-pink {
+  background: linear-gradient(135deg, #ff4785 0%, #ff6da0 50%, #ff8db7 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(255, 71, 133, 0.35);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-pink:hover {
+  transform: translateY(-1.5px) scale(1.01);
+  box-shadow: 0 6px 24px rgba(255, 71, 133, 0.55);
+  filter: brightness(1.06);
+}
+
+.btn-pink:active {
+  transform: translateY(1px);
+}
+
+/* Selection Cards */
+.selectable-card {
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  background: var(--bg-card);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.selectable-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.selectable-card.active {
+  border-color: var(--accent-pink);
+  background: var(--bg-subtle);
+  box-shadow: 0 0 0 1px var(--accent-pink), var(--shadow-coquette);
+}
+
+.selectable-card.active .check-indicator {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.check-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--accent-pink);
+  color: #ffffff;
+  border-radius: 9999px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.2s ease;
+}
+
+/* Step Numbers */
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff4785, #ff75a0);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(255, 71, 133, 0.4);
+}
+
+/* Category Filter Active Pill */
+.category-pill {
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.category-pill.active {
+  background: linear-gradient(135deg, #ff4785 0%, #ff75a0 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(255, 71, 133, 0.4);
+  border-color: transparent !important;
+}
+
+/* Theme Switcher Toggle Pill */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-main);
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--accent-pink);
+  transform: scale(1.03);
+  box-shadow: var(--shadow-coquette);
+}
+
+/* Coquette Decorative Badges & Bows */
+.coquette-badge {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--accent-pink);
+}
+
+.coquette-bow {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  animation: bow-wiggle 3s ease-in-out infinite;
+}
+
+@keyframes bow-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-6deg); }
+  75% { transform: rotate(6deg); }
+}
+
+/* Pulsing Badge */
+.pulse-badge {
+  animation: pulse-coquette 2.2s infinite;
+}
+
+@keyframes pulse-coquette {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 71, 133, 0.4);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 71, 133, 0.65);
+  }
+}
+
+/* Marquee / Live Ticker */
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-move {
+  display: inline-block;
+  animation: ticker 38s linear infinite;
+}
+
+.ticker-wrap:hover .ticker-move {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Floating Support Button */
+.floating-support-btn {
+  position: fixed;
+  bottom: 84px;
+  right: 20px;
+  z-index: 40;
+  box-shadow: var(--shadow-coquette);
+}
+
+@media (min-width: 768px) {
+  .floating-support-btn {
+    bottom: 28px;
+    right: 28px;
+  }
+}
+
+/* Mobile Bottom Navigation Bar */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-color);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 8px;
+  box-shadow: 0 -4px 20px rgba(255, 105, 180, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+
+/* Form Inputs */
+.theme-input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.theme-input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--accent-pink-glow);
+}
+
+.theme-input::placeholder {
+  color: var(--text-dim);
+}
+
+/* Modals */
+.modal-backdrop {
+  background: rgba(45, 15, 33, 0.65);
+  backdrop-filter: blur(8px);
+}
+[data-theme="dark"] .modal-backdrop {
+  background: rgba(10, 4, 18, 0.85);
+}
+
+/* =========================================================
+   LIVE PINK COQUETTE DESIGN ELEMENTS 🎀🌸✨
+   ========================================================= */
+
+/* Floating particles background */
+.coquette-floating-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-item {
+  position: absolute;
+  bottom: -40px;
+  user-select: none;
+  animation: floatUpSlow linear infinite;
+  opacity: 0.75;
+  filter: drop-shadow(0 2px 8px rgba(255, 71, 133, 0.35));
+}
+
+@keyframes floatUpSlow {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-112vh) translateX(var(--drift-x, 40px)) rotate(var(--rot, 35deg)) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Sparkle Cursor Trail */
+.coquette-sparkle-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 15px;
+  animation: sparklePop 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  filter: drop-shadow(0 0 6px rgba(255, 71, 133, 0.85));
+}
+
+@keyframes sparklePop {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-24px) scale(1.25) rotate(20deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-52px) scale(0.2) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Scalloped Lace Section Divider with Ribbon */
+.coquette-lace-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2.5rem 0;
+}
+
+.coquette-lace-divider::before,
+.coquette-lace-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--border-color), var(--accent-pink), transparent);
+}
+
+.coquette-lace-bow {
+  padding: 0 16px;
+  font-size: 1.6rem;
+  animation: bowBob 3s ease-in-out infinite;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes bowBob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(5deg) scale(1.08); }
+}
+
+/* Category Cards with Pink Picture Theme */
+.category-card-pink {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 2px solid var(--border-color);
+  background: var(--bg-card);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.category-card-pink:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-pink);
+  box-shadow: 0 14px 32px rgba(255, 71, 133, 0.35);
+}
+
+.category-card-pink:hover h3 {
+  text-shadow: 0 0 18px rgba(255, 71, 133, 0.95), 0 2px 8px rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+
+.category-card-pink.active {
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 4px var(--accent-pink-glow), 0 14px 30px rgba(255, 71, 133, 0.3);
+}
+
+/* Pink Image Tint & Aura Overlay for Game Cards */
+.pink-duo-overlay {
+  position: relative;
+}
+
+.pink-duo-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 182, 193, 0.12) 0%, rgba(255, 71, 133, 0.22) 100%);
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  transition: opacity 0.3s ease;
+}
+
+.glass-card:hover .pink-duo-overlay::after {
+  background: linear-gradient(180deg, rgba(255, 182, 193, 0.25) 0%, rgba(255, 71, 133, 0.38) 100%);
+}
+
+/* Shimmering Pink Aura Badge */
+.live-pink-pulse {
+  animation: livePinkGlow 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes livePinkGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 71, 133, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 22px 6px rgba(255, 71, 133, 0.35);
+  }
+}
+
+/* Floating Coquette Corner Mascot / Announcement Pill */
+.coquette-floating-assistant {
+  position: fixed;
+  bottom: 84px;
+  left: 20px;
+  z-index: 40;
+  animation: floatMascot 4s ease-in-out infinite;
+}
+
+@keyframes floatMascot {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ========================================================
+   THE ASPIRANTS 5.0 LIVE HERO BANNER (OBSIDIA & SELENA) 🎀⚡
+   ======================================================== */
+.aspirants-hero-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 2px solid rgba(255, 105, 180, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 40px rgba(255, 71, 133, 0.25);
+  min-height: 480px;
+}
+
+.aspirants-live-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/characters/aspirants-duo.jpg');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  animation: aspirantsKenBurns 24s ease-in-out infinite alternate;
+  filter: none;
+  z-index: 0;
+  transition: background-image 0.5s ease-in-out;
+}
+
+@keyframes aspirantsKenBurns {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Very subtle edge-only vignette so edges blend softly into container, characters 100% uncovered */
+.aspirants-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 65%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+body:not(.dark) .aspirants-vignette {
+  background: radial-gradient(ellipse at center, transparent 65%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+.aspirants-sparks {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.aspirants-spark {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #ff4785 60%, transparent 100%);
+  box-shadow: 0 0 10px #ff4785, 0 0 20px #ff75a0;
+  animation: floatSpark linear infinite;
+}
+
+@keyframes floatSpark {
+  0% {
+    transform: translateY(110%) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-20%) translateX(40px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.cyber-rune-badge {
+  background: linear-gradient(135deg, rgba(255, 71, 133, 0.3) 0%, rgba(138, 43, 226, 0.3) 100%);
+  border: 1px solid rgba(255, 105, 180, 0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(255, 71, 133, 0.4);
+}
+

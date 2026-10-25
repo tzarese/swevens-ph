@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SWEVENS.PH 🎀 Coquette Game Credits Portal • By Cha (@itsme_cha)</title>
+  <meta name="description" content="Official Coquette Top-Up Portal by Cha (@itsme_cha) ♡ Top up Mobile Legends, Valorant, Genshin Impact, and Roblox with GCash, Maya, and QR Ph. 🎀" />
+  <meta name="author" content="Cha (@itsme_cha)" />
+  <meta name="creator" content="Cha (@itsme_cha)" />
+  <meta name="owner" content="itsme_cha" />
+  <meta name="copyright" content="© 2026 SWEVENS.PH • Owned & Developed by itsme_cha" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff4785'><text y='20' font-size='20'>🎀</text></svg>" />
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Cache Prevention Meta Tags -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet with Coquette Aesthetics & Light Mode -->
+  <link rel="stylesheet" href="css/style.css?v=3.0" />
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- LIVE COQUETTE FLOATING PARTICLES LAYER 🎀🌸✨ -->
+  <div id="coquette-floating-layer" class="coquette-floating-layer"></div>
+
+  <!-- TOP COQUETTE ANNOUNCEMENT BANNER -->
+  <div class="py-1.5 px-4 text-center text-xs font-semibold border-b border-[var(--border-color)] transition" style="background: var(--bg-subtle); color: var(--accent-pink);">
+    <div class="max-w-7xl mx-auto flex items-center justify-center space-x-2">
+      <span class="coquette-bow">🎀</span>
+      <span>SWEVENS Coquette Special: Use code <strong class="underline cursor-pointer hover:opacity-80" onclick="useSuggestedVoucher('COQUETTE5')">COQUETTE5</strong> on checkout for an extra 5% OFF with love ♡</span>
+      <span class="hidden sm:inline">✨</span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <div class="flex items-center space-x-6">
+        <a href="#home" onclick="navigateTo('home'); return false;" class="flex items-center space-x-2.5 group">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-400 via-rose-400 to-pink-500 flex items-center justify-center shadow-md shadow-pink-400/30 group-hover:scale-105 transition text-xl">
+            🎀
+          </div>
+          <div class="flex flex-col">
+            <span class="font-black text-xl tracking-wider flex items-center text-[var(--text-main)]">
+              SWEVENS<span class="text-[var(--accent-pink)]">.PH</span>
+            </span>
+            <span class="text-[9px] uppercase tracking-widest text-[var(--accent-pink)] font-bold -mt-1">Sweet Top-Ups ♡</span>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAV LINKS -->
+        <nav class="hidden lg:flex items-center space-x-1 text-xs font-semibold">
+          <button onclick="navigateTo('home')" data-nav="home" class="px-3.5 py-2 rounded-xl hover:text-[var(--accent-pink)] transition flex items-center space-x-1.5 text-[var(--accent-pink)] font-bold">
+            <i data-lucide="home" class="w-3.5 h-3.5"></i>
+            <span>Home 🎀</span>
+          </button>
+          <button onclick="navigateTo('order-tracker')" data-nav="order-tracker" class="px-3.5 py-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--accent-pink)] transition flex items-center space-x-1.5">
+            <i data-lucide="receipt" class="w-3.5 h-3.5"></i>
+            <span>Order Tracker</span>
+          </button>
+          <button onclick="navigateTo('server-checker')" data-nav="server-checker" class="px-3 py-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--accent-pink)] transition flex items-center space-x-1.5">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span>MLBB Server Checker</span>
+          </button>
+          <button onclick="navigateTo('leaderboard')" data-nav="leaderboard" class="px-3 py-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--accent-pink)] transition flex items-center space-x-1.5">
+            <i data-lucide="trophy" class="w-3.5 h-3.5 text-amber-500"></i>
+            <span>Leaderboard 🏆</span>
+          </button>
+          <button onclick="navigateTo('price-list')" data-nav="price-list" class="px-3 py-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--accent-pink)] transition flex items-center space-x-1.5">
+            <i data-lucide="badge-percent" class="w-3.5 h-3.5"></i>
+            <span>Price List</span>
+          </button>
+          <button onclick="navigateTo('affiliate')" data-nav="affiliate" class="px-3 py-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--accent-pink)] transition flex items-center space-x-1.5">
+            <span>🎀</span>
+            <span>Affiliate</span>
+          </button>
+          <button onclick="openOrNavigateAccount()" data-nav="account" class="px-3.5 py-1.5 rounded-xl border border-[var(--border-color)] bg-[var(--bg-subtle)] text-[var(--accent-pink)] font-bold text-xs hover:border-[var(--accent-pink)] transition flex items-center space-x-1.5 shadow-sm">
+            <span>🎀</span>
+            <span>My Account</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- RIGHT SIDE: THEME SWITCHER & AUTH -->
+      <div class="flex items-center space-x-3">
+        <!-- COQUETTE THEME TOGGLE BUTTON -->
+        <div id="theme-toggle-container">
+          <!-- Rendered by app.js -->
+        </div>
+
+        <!-- Region Pill -->
+        <div class="hidden sm:flex items-center space-x-1.5 px-3 py-1 rounded-full coquette-badge text-xs font-semibold">
+          <span>🇵🇭</span>
+          <span>PHP (₱)</span>
+        </div>
+
+        <!-- Auth buttons -->
+        <div id="nav-auth-section">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN SPA CONTENT ROUTER -->
+  <main id="main-content" class="flex-1 pb-20 lg:pb-12">
+    <!-- View content loaded via app.js -->
+  </main>
+
+  <!-- FLOATING LIVE SUPPORT BUTTON -->
+  <div class="floating-support-btn">
+    <button 
+      onclick="showToast('SWEVENS Customer support agent is online! (Facebook & Email) 🎀', 'info')" 
+      class="flex items-center space-x-2 px-4 py-2.5 rounded-full btn-pink font-bold text-xs shadow-2xl hover:scale-105 transition"
+    >
+      <i data-lucide="heart" class="w-4 h-4 fill-white text-white"></i>
+      <span class="hidden sm:inline">24/7 SWEVENS Support ♡</span>
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[var(--border-color)] text-xs mt-auto transition" style="background: var(--bg-card);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center space-x-2.5">
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-pink-400 to-rose-500 flex items-center justify-center text-base">
+              🎀
+            </div>
+            <span class="font-black text-lg text-[var(--text-main)]">SWEVENS.PH</span>
+          </div>
+          <p class="text-xs text-[var(--text-muted)] leading-relaxed pr-6">
+            SWEVENS is the premier Coquette gaming top-up destination in the Philippines. We offer automated instant delivery for Mobile Legends, Valorant, Genshin Impact, and popular titles at guaranteed competitive prices with love ♡.
+          </p>
+          <div class="flex items-center space-x-3 text-[var(--text-dim)]">
+            <span class="text-xs">Official Channels:</span>
+            <a href="#" onclick="showToast('Facebook: @swevens.gaming 🎀', 'info'); return false;" class="hover:text-[var(--accent-pink)] transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+            <a href="#" onclick="showToast('TikTok: @swevens.ph ♡', 'info'); return false;" class="hover:text-[var(--accent-pink)] transition"><i data-lucide="video" class="w-4 h-4"></i></a>
+            <a href="mailto:support@swevens.ph" class="hover:text-[var(--accent-pink)] transition"><i data-lucide="mail" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 1: Tools & Guides -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-[var(--text-main)] text-xs uppercase tracking-wider flex items-center space-x-1">
+            <span>🎀</span>
+            <span>Tools & Guides</span>
+          </h4>
+          <ul class="space-y-2 text-[var(--text-muted)]">
+            <li><a href="#order-tracker" onclick="navigateTo('order-tracker'); return false;" class="hover:text-[var(--accent-pink)] transition">Track Your Order ♡</a></li>
+            <li><a href="#server-checker" onclick="navigateTo('server-checker'); return false;" class="hover:text-[var(--accent-pink)] transition">MLBB Server Checker</a></li>
+            <li><a href="#price-list" onclick="navigateTo('price-list'); return false;" class="hover:text-[var(--accent-pink)] transition">Price List & Compare</a></li>
+            <li><a href="#" onclick="showToast('SWEVENS Help Center & FAQs 🎀', 'info'); return false;" class="hover:text-[var(--accent-pink)] transition">FAQ & Help Center</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Programs -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-[var(--text-main)] text-xs uppercase tracking-wider flex items-center space-x-1">
+            <span>🎀</span>
+            <span>Programs</span>
+          </h4>
+          <ul class="space-y-2 text-[var(--text-muted)]">
+            <li><a href="#affiliate" onclick="navigateTo('affiliate'); return false;" class="hover:text-[var(--accent-pink)] transition">Affiliate Program</a></li>
+            <li><a href="#affiliate" onclick="navigateTo('affiliate'); return false;" class="hover:text-[var(--accent-pink)] transition">Reseller Wholesale</a></li>
+            <li><a href="#" onclick="showToast('API access is available for verified VIP merchants on SWEVENS ♡', 'info'); return false;" class="hover:text-[var(--accent-pink)] transition">Top-Up API Integration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Legal & Security -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-[var(--text-main)] text-xs uppercase tracking-wider flex items-center space-x-1">
+            <span>🎀</span>
+            <span>Information</span>
+          </h4>
+          <ul class="space-y-2 text-[var(--text-muted)]">
+            <li><a href="#" onclick="showToast('About SWEVENS: Authorized digital distributor in the Philippines 🎀', 'info'); return false;" class="hover:text-[var(--accent-pink)] transition">About Us</a></li>
+            <li><a href="#" onclick="showToast('Terms & Conditions: Standard electronic purchase policy applies ♡', 'info'); return false;" class="hover:text-[var(--accent-pink)] transition">Terms & Conditions</a></li>
+            <li><a href="#" onclick="showToast('Privacy Policy: Customer data is 256-bit encrypted ✨', 'info'); return false;" class="hover:text-[var(--accent-pink)] transition">Privacy Policy</a></li>
+            <li><a href="mailto:support@swevens.ph" class="hover:text-[var(--accent-pink)] transition">support@swevens.ph</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Payment Channels Banner -->
+      <div class="pt-6 border-t border-[var(--border-color)] flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center space-x-2 text-[var(--text-muted)] text-xs">
+          <span>Supported Local Payment Gateways:</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 text-[10px] font-bold">
+          <span class="px-2.5 py-1 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border-color)] text-[var(--accent-pink)]">QR Ph 🎀</span>
+          <span class="px-2.5 py-1 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border-color)] text-blue-500">GCash</span>
+          <span class="px-2.5 py-1 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border-color)] text-emerald-600">Maya</span>
+          <span class="px-2.5 py-1 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border-color)] text-orange-500">ShopeePay</span>
+          <span class="px-2.5 py-1 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border-color)] text-emerald-500">GrabPay</span>
+          <span class="px-2.5 py-1 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border-color)] text-rose-500">BPI Direct</span>
+          <span class="px-2.5 py-1 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border-color)] text-amber-500">UnionBank</span>
+          <span class="px-2.5 py-1 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border-color)] text-red-500">7-Eleven Cliqq</span>
+        </div>
+      </div>
+
+      <!-- Copyright & Official Watermark -->
+      <div class="pt-4 text-center space-y-1.5">
+        <div class="text-[var(--text-main)] text-xs font-bold">
+          © 2026 SWEVENS.PH ♡ Created, Owned & Maintained by <span class="text-[var(--accent-pink)] font-black">Cha (@itsme_cha)</span> 🎀 All Rights Reserved.
+        </div>
+        <div class="text-[var(--text-dim)] text-[10px] tracking-wide font-mono flex items-center justify-center space-x-2">
+          <span>🎀 WATERMARK: <strong class="text-[var(--accent-pink)]">CHA-SWEVENS-PH-2026</strong></span>
+          <span>•</span>
+          <span>EXCLUSIVE COQUETTE RECHARGE PORTAL</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM APP BAR (Matches Nexone Mobile Layout) -->
+  <div class="mobile-bottom-nav">
+    <button onclick="navigateTo('home')" data-nav="home" class="flex flex-col items-center justify-center space-y-1 text-[var(--accent-pink)] font-bold">
+      <i data-lucide="home" class="w-4 h-4"></i>
+      <span class="text-[9px]">Home 🎀</span>
+    </button>
+    <button onclick="openAccountSubtab('orders')" data-nav="orders" class="flex flex-col items-center justify-center space-y-1 text-[var(--text-muted)]">
+      <i data-lucide="clock" class="w-4 h-4"></i>
+      <span class="text-[9px]">History</span>
+    </button>
+    <button onclick="openAccountSubtab('overview')" data-nav="account" class="flex flex-col items-center justify-center space-y-1 text-[var(--text-muted)]">
+      <span class="text-sm">🎀</span>
+      <span class="text-[9px]">Account</span>
+    </button>
+    <button onclick="openAccountSubtab('topup')" data-nav="topup" class="flex flex-col items-center justify-center space-y-1 text-[var(--text-muted)]">
+      <i data-lucide="wallet" class="w-4 h-4"></i>
+      <span class="text-[9px]">Topup 👛</span>
+    </button>
+    <button onclick="openAccountSubtab('affiliate')" data-nav="affiliate" class="flex flex-col items-center justify-center space-y-1 text-[var(--text-muted)]">
+      <i data-lucide="share-2" class="w-4 h-4"></i>
+      <span class="text-[9px]">Affiliate</span>
+    </button>
+  </div>
+
+  <!-- FLOATING LIVE COQUETTE COMPANION & PERK PILL 🎀 -->
+  <div id="coquette-live-assistant" class="coquette-floating-assistant hidden md:flex items-center space-x-2.5 px-4 py-2.5 rounded-full bg-[var(--bg-card)] border-2 border-pink-400 shadow-xl shadow-pink-500/20 backdrop-blur-md cursor-pointer hover:scale-105 transition group" onclick="copyVoucherCode('COQUETTE5')">
+    <span class="w-2.5 h-2.5 rounded-full bg-pink-500 live-pink-pulse"></span>
+    <span class="text-base group-hover:rotate-12 transition">🎀</span>
+    <div class="flex flex-col text-left">
+      <span class="text-[10px] font-black text-[var(--accent-pink)] uppercase tracking-wider flex items-center space-x-1">
+        <span>Coquette Special</span>
+        <span>✨</span>
+      </span>
+      <span class="text-xs font-bold text-[var(--text-main)]">Cha (itsme_cha): Code <span class="text-[var(--accent-pink)] underline font-mono">COQUETTE5</span></span>
+    </div>
+    <span class="text-[10px] bg-pink-100 dark:bg-pink-950 text-pink-600 dark:text-pink-300 px-2 py-0.5 rounded-full font-bold ml-1 border border-pink-300 dark:border-pink-800">5% OFF ♡</span>
+  </div>
+
+  <!-- PERMANENT CREATOR WATERMARK BADGE (BOTTOM LEFT) 🎀 -->
+  <div id="cha-watermark-pill" class="fixed bottom-4 left-4 z-40 hidden sm:flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[var(--bg-card)]/90 backdrop-blur-md border border-pink-400/50 shadow-lg shadow-pink-500/10 text-xs font-bold pointer-events-auto hover:scale-105 transition group" title="Official Watermark • Owned by Cha (@itsme_cha)">
+    <span class="text-xs group-hover:rotate-12 transition">🎀</span>
+    <span class="text-[10px] text-[var(--text-muted)] font-medium">Site Owner:</span>
+    <span class="text-[11px] text-[var(--accent-pink)] font-black tracking-wide">@itsme_cha</span>
+    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 live-pink-pulse ml-0.5" title="Verified Portal"></span>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/data.js?v=3.0"></script>
+  <script src="js/app.js?v=3.0"></script>
+</body>
+</html>

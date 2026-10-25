@@ -1,0 +1,24 @@
+{
+  "name": "swevens-ph",
+  "version": "1.0.0",
+  "description": "SWEVENS.PH ♡ Coquette Game Credits & Top-Up Portal Philippines",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "coquette",
+    "topup",
+    "mobile-legends",
+    "philippines",
+    "swevens",
+    "game-credits",
+    "itsme-cha"
+  ],
+  "author": "Cha (@itsme_cha)",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
